@@ -1,41 +1,47 @@
 <template>
   <v-form v-model="valid">
-    <v-container>
-      <v-row>
-        <v-col
+    <v-container style="background: antiquewhite; margin-top: 20px; width: 50%">
+      <v-row style="margin: 0 auto">
+        <v-col style="margin: 0 auto"
           cols="12"
           md="4"
         >
           <v-text-field
-            v-model="password"
-            :rules="passwordRules"
-            :counter="10"
-            label="Password"
-            required
-          ></v-text-field>
-        </v-col>
-
-        <v-col
-          cols="12"
-          md="4"
-        >
-          <v-text-field
-            v-model="email"
+            v-model="userForm.email"
             :rules="emailRules"
             label="E-mail"
             required
           ></v-text-field>
         </v-col>
       </v-row>
-    </v-container>
 
-    <div class="form-group row mb-0">
-      <div class="col-md-8 offset-md-4">
-        <button type="submit" class="btn btn-primary">
-          Login
-        </button>
-      </div>
-    </div>
+      <v-row style="margin: 0 auto">
+        <v-col style="margin: 0 auto"
+          cols="12"
+          md="4"
+        >
+          <v-text-field
+            v-model="userForm.password"
+            :rules="passwordRules"
+            :counter="10"
+            label="Password"
+            required
+          ></v-text-field>
+        </v-col>
+      </v-row>
+
+
+      <v-row style="text-align: center">
+        <v-col style="margin: 0 auto"
+          cols="12"
+          md="4"
+        >
+          <v-btn elevation="2" block @click="addUser">
+            Login
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-form>
 </template>
 <script>
@@ -64,9 +70,6 @@ export default {
     async addUser() {
       await this.$auth.login({
         data: this.userForm
-      });
-      await this.$router.push({
-        path: '/'
       });
     }
   }

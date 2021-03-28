@@ -52,9 +52,9 @@ export default {
     strategies: {
       local: {
         endpoints: {
-          login: {url: 'login', method: 'post', propertyName: 'meta.token'},
+          login: {url: 'login', method: 'post', propertyName: 'token', token_type: 'Bearer'},
           user: {url: 'user', method: 'get', propertyName: 'data'},
-          logout: {url: 'logout', method: 'post'}
+          logout: {url: 'logout', method: 'get'}
         }
       }
     }
