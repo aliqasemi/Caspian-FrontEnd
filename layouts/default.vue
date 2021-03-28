@@ -1,5 +1,8 @@
 <template>
-  <Navbar/>
+  <div>
+      <Navbar/>
+      <nuxt/>
+  </div>
 </template>
 
 <script>
