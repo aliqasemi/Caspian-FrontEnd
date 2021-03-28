@@ -42,7 +42,11 @@
 
           <template v-if="!loggedIn">
             <v-list-item>
-              <v-list-item-title style="text-align: center" href="">ثبت نام</v-list-item-title>
+              <v-list-item-title style="text-align: center" href="">
+                <nuxt-link :to="{ name: 'register' }" style="text-align: center">
+                  ثبت نام
+                </nuxt-link>
+              </v-list-item-title>
             </v-list-item>
 
             <v-list-item>
