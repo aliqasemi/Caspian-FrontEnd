@@ -64,7 +64,7 @@
 
           <template v-if="loggedIn">
             <v-list-item>
-              <v-list-item-title style="text-align: center" href="">نام کاربری</v-list-item-title>
+              <v-list-item-title style="text-align: center" href="">{{user.firstname + user.lastname}}</v-list-item-title>
             </v-list-item>
 
             <v-list-item>
