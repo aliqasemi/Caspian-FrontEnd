@@ -24,7 +24,7 @@
             <v-text-field
               v-model="userForm.password"
               :rules="passwordRules"
-              :counter="10"
+              type="password"
               label="Password"
               required
             ></v-text-field>
@@ -73,7 +73,7 @@ export default {
     password: '',
     passwordRules: [
       v => !!v || 'Password is required',
-      v => v.length <= 10 || 'Name must be less than 10 characters',
+      v => v.length <= 16 || 'Name must be less than 10 characters',
     ],
     email: '',
     emailRules: [
