@@ -1,6 +1,6 @@
 <template>
   <v-form v-model="valid">
-    <v-container>
+    <v-container style="background: antiquewhite; margin-top: 20px; width: 50%">
       <v-row>
         <v-col
           cols="12"
@@ -52,19 +52,6 @@
             required
           ></v-text-field>
         </v-col>
-
-        <v-col
-          cols="12"
-          md="4"
-        >
-          <v-textarea
-            v-model="userForm.address"
-            :rules="addressRules"
-            label="Address"
-            required
-          ></v-textarea>
-        </v-col>
-
         <v-col
           cols="12"
           md="4"
@@ -88,6 +75,20 @@
             type="password"
             required
           ></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col
+          style="margin: 0 auto"
+          cols="12"
+          md="8"
+        >
+          <v-textarea
+            v-model="userForm.address"
+            :rules="addressRules"
+            label="Address"
+            required
+          ></v-textarea>
         </v-col>
       </v-row>
       <v-row style="text-align: center">
