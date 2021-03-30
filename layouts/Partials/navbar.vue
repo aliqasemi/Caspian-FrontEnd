@@ -98,9 +98,6 @@ export default {
       this.drawer = false
     },
   },
-  mounted() {
-    console.log("loggedIn",this.loggedIn)
-  },
   methods: {
     logout() {
       this.$auth.logout();
