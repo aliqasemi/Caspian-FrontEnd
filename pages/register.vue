@@ -77,9 +77,6 @@ export default {
           password: this.userForm.password
         }
       })
-      this.$router.push({
-        path: '/'
-      });
     }
   }
 }

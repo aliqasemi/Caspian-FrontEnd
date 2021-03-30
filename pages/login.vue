@@ -48,7 +48,7 @@
       <template v-slot:close>
         <v-btn
           width="100%"
-          @click="closeSnackBar"
+          @click="error = null"
         >
           بستن
         </v-btn>
@@ -59,6 +59,7 @@
 <script>
 
 import Notification from '../components/Notification'
+import error from "../layouts/error";
 
 export default {
   name: 'login',
@@ -80,7 +81,6 @@ export default {
       v => /.+@.+/.test(v) || 'E-mail must be valid',
     ],
     error: null,
-    snackbar: true,
 
     userForm: {
       email: '',
@@ -98,10 +98,6 @@ export default {
         this.error = e.response.data
       }
     },
-    closeSnackBar: function () {
-      this.snackbar = false;
-      this.error = null;
-    }
   }
 }
 </script>
